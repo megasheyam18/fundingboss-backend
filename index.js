@@ -14,6 +14,7 @@ app.use(express.json());
 const captchas = {};
 const submissions = [];
 
+// Root route
 app.get('/', (req, res) => {
     res.send('FundBoss Multi-Page API is running.');
 });
@@ -49,24 +50,64 @@ app.post('/api/verify-captcha', (req, res) => {
 app.post('/api/verify-pan', async (req, res) => {
     const { panNumber } = req.body;
     await new Promise(r => setTimeout(r, 1000));
-    
-    // Demo: ABCDE1234F is valid
+
     if (panNumber === 'ABCDE1234F') {
         return res.json({ success: true, data: { fullName: 'MEGA SHYAM' } });
     }
-    
-    // Otherwise generic success for demo
+
     res.json({ success: true, data: { fullName: 'TEST USER' } });
 });
 
-// Final Submission
-app.post('/api/submit-loan', (req, res) => {
-    const data = req.body;
-    submissions.push({ ...data, timestamp: new Date() });
-    console.log('✅ New Loan Application Received:', data);
-    res.json({ success: true });
+// ✅ GET METHOD
+app.get('/api/submit-loan', (req, res) => {
+    res.json({
+        success: true,
+        count: submissions.length,
+        data: submissions
+    });
 });
 
+// ✅ POST METHOD (Sheety + local store)
+app.post('/api/submit-loan', async (req, res) => {
+    try {
+        const formData = req.body;
+
+        submissions.push({ ...formData, timestamp: new Date() });
+
+        const response = await axios.post(
+            "https://api.sheety.co/8158302f4f8bfc807bc480429465b087/harishProject/sheet1",
+            {
+                sheet1: {
+                    mobile: formData.mobile,
+                    pinCode: formData.pinCode,
+                    panNumber: formData.panNumber,
+                    loanType: formData.loanType,
+                    salary: formData.salary,
+                    loanAmount: formData.loanAmount,
+                    hasPF: formData.hasPF,
+                    designation: formData.designation,
+                    hasGST: formData.hasGST,
+                    businessRegistration: formData.businessRegistration
+                }
+            }
+        );
+
+        res.json({
+            success: true,
+            message: "Loan submitted & saved to Google Sheet",
+            sheetData: response.data
+        });
+
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).json({
+            success: false,
+            error: error.message
+        });
+    }
+});
+
+// 🚀 START SERVER (ALWAYS LAST)
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
