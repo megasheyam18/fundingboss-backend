@@ -5,109 +5,105 @@ const axios = require('axios');
 const crypto = require('crypto');
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
 
-// In-memory storage
+// In-memory storage (demo only)
 const captchas = {};
 const submissions = [];
 
 // Root route
 app.get('/', (req, res) => {
-    res.send('FundBoss Multi-Page API is running.');
+  res.send('FundBoss API is running on Vercel 🚀');
 });
 
 // CAPTCHA Generation
 app.get('/api/generate-captcha', (req, res) => {
-    const id = crypto.randomBytes(8).toString('hex');
-    const challenge = Math.random().toString(36).substring(2, 8).toUpperCase();
-    const expiry = Date.now() + 5 * 60 * 1000;
+  const id = crypto.randomBytes(8).toString('hex');
+  const challenge = Math.random().toString(36).substring(2, 8).toUpperCase();
+  const expiry = Date.now() + 5 * 60 * 1000;
 
-    captchas[id] = { challenge, expiry };
-    res.json({ success: true, id, challenge });
+  captchas[id] = { challenge, expiry };
+  res.json({ success: true, id, challenge });
 });
 
 // CAPTCHA Verification
 app.post('/api/verify-captcha', (req, res) => {
-    const { id, userInput } = req.body;
-    const stored = captchas[id];
+  const { id, userInput } = req.body;
+  const stored = captchas[id];
 
-    if (!stored || Date.now() > stored.expiry) {
-        return res.status(400).json({ success: false, message: 'Expired or invalid' });
-    }
+  if (!stored || Date.now() > stored.expiry) {
+    return res.status(400).json({ success: false, message: 'Expired or invalid' });
+  }
 
-    if (stored.challenge === userInput.toUpperCase()) {
-        delete captchas[id];
-        res.json({ success: true });
-    } else {
-        res.status(400).json({ success: false });
-    }
+  if (stored.challenge === userInput.toUpperCase()) {
+    delete captchas[id];
+    res.json({ success: true });
+  } else {
+    res.status(400).json({ success: false });
+  }
 });
 
-// PAN Verification Mock
+// PAN Verification (Mock)
 app.post('/api/verify-pan', async (req, res) => {
-    const { panNumber } = req.body;
-    await new Promise(r => setTimeout(r, 1000));
+  const { panNumber } = req.body;
+  await new Promise(r => setTimeout(r, 1000));
 
-    if (panNumber === 'ABCDE1234F') {
-        return res.json({ success: true, data: { fullName: 'MEGA SHYAM' } });
-    }
+  if (panNumber === 'ABCDE1234F') {
+    return res.json({ success: true, data: { fullName: 'MEGA SHYAM' } });
+  }
 
-    res.json({ success: true, data: { fullName: 'TEST USER' } });
+  res.json({ success: true, data: { fullName: 'TEST USER' } });
 });
 
-// ✅ GET METHOD
+// GET all loan submissions
 app.get('/api/submit-loan', (req, res) => {
-    res.json({
-        success: true,
-        count: submissions.length,
-        data: submissions
-    });
+  res.json({
+    success: true,
+    count: submissions.length,
+    data: submissions
+  });
 });
 
-// ✅ POST METHOD (Sheety + local store)
+// POST loan submission (Sheety)
 app.post('/api/submit-loan', async (req, res) => {
-    try {
-        const formData = req.body;
+  try {
+    const formData = req.body;
 
-        submissions.push({ ...formData, timestamp: new Date() });
+    submissions.push({ ...formData, timestamp: new Date() });
 
-        const response = await axios.post(
-            "https://api.sheety.co/8158302f4f8bfc807bc480429465b087/harishProject/sheet1",
-            {
-                sheet1: {
-                    mobile: formData.mobile,
-                    pinCode: formData.pinCode,
-                    panNumber: formData.panNumber,
-                    loanType: formData.loanType,
-                    salary: formData.salary,
-                    loanAmount: formData.loanAmount,
-                    hasPF: formData.hasPF,
-                    designation: formData.designation,
-                    hasGST: formData.hasGST,
-                    businessRegistration: formData.businessRegistration
-                }
-            }
-        );
+    const response = await axios.post(
+      'https://api.sheety.co/8158302f4f8bfc807bc480429465b087/harishProject/sheet1',
+      {
+        sheet1: {
+          mobile: formData.mobile,
+          pinCode: formData.pinCode,
+          panNumber: formData.panNumber,
+          loanType: formData.loanType,
+          salary: formData.salary,
+          loanAmount: formData.loanAmount,
+          hasPF: formData.hasPF,
+          designation: formData.designation,
+          hasGST: formData.hasGST,
+          businessRegistration: formData.businessRegistration
+        }
+      }
+    );
 
-        res.json({
-            success: true,
-            message: "Loan submitted & saved to Google Sheet",
-            sheetData: response.data
-        });
-
-    } catch (error) {
-        console.error(error.message);
-        res.status(500).json({
-            success: false,
-            error: error.message
-        });
-    }
+    res.json({
+      success: true,
+      message: 'Loan submitted & saved to Google Sheet',
+      sheetData: response.data
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      error: error.message
+    });
+  }
 });
 
-// 🚀 START SERVER (ALWAYS LAST)
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+// ✅ REQUIRED FOR VERCEL (NO app.listen)
+module.exports = app;
+    
