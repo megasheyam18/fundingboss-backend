@@ -1,0 +1,842 @@
+[2026-02-14T16:35:49.561Z] POST /api/submit-loan
+[2026-02-14T16:35:49.561Z] Body: {
+  "mobile": "9999999999",
+  "pinCode": "600001",
+  "panNumber": "ABCDE1234F",
+  "loanType": "Salaried",
+  "salary": "50000",
+  "loanAmount": "200000",
+  "hasPF": "Yes",
+  "designation": "Manager"
+}
+[2026-02-14T16:35:49.562Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-14T16:35:49.562Z] Sheety Body: {
+  "salaried": {
+    "mobile": "9999999999",
+    "pinCode": "600001",
+    "panNumber": "ABCDE1234F",
+    "salary": "50000",
+    "loanAmount": "200000",
+    "hasPF": "Yes",
+    "designation": "Manager"
+  }
+}
+[2026-02-14T16:35:52.222Z] CRITICAL: Sheety Submission Failed!
+[2026-02-14T16:35:52.222Z] {
+  "errors": [
+    {
+      "detail": "Cannot read property '0' of undefined"
+    }
+  ]
+}
+[2026-02-14T16:42:33.471Z] POST /api/submit-loan
+[2026-02-14T16:42:33.471Z] Body: {
+  "mobile": "9999999999",
+  "pinCode": "666666",
+  "panNumber": "AAAAA1111A",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "100",
+  "hasPF": "No",
+  "designation": "",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:42:33.471Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-14T16:42:33.471Z] Sheety Body: {
+  "business": {
+    "mobile": "9999999999",
+    "pinCode": "666666",
+    "panNumber": "AAAAA1111A",
+    "loanAmount": "100",
+    "hasGST": "No",
+    "businessRegistration": "No"
+  }
+}
+[2026-02-14T16:42:33.505Z] POST /api/submit-loan
+[2026-02-14T16:42:33.505Z] Body: {
+  "mobile": "9999999999",
+  "pinCode": "666666",
+  "panNumber": "AAAAA1111A",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "100",
+  "hasPF": "No",
+  "designation": "",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:42:33.505Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-14T16:42:33.505Z] Sheety Body: {
+  "business": {
+    "mobile": "9999999999",
+    "pinCode": "666666",
+    "panNumber": "AAAAA1111A",
+    "loanAmount": "100",
+    "hasGST": "No",
+    "businessRegistration": "No"
+  }
+}
+[2026-02-14T16:42:39.484Z] CRITICAL: Sheety Submission Failed!
+[2026-02-14T16:42:39.484Z] {
+  "errors": [
+    {
+      "detail": "Cannot read property '0' of undefined"
+    }
+  ]
+}
+[2026-02-14T16:42:55.352Z] CRITICAL: Sheety Submission Failed!
+[2026-02-14T16:42:55.352Z] ""
+[2026-02-14T16:55:57.439Z] POST /api/submit-loan
+[2026-02-14T16:55:57.439Z] Body: {
+  "mobile": "9999999999",
+  "pinCode": "666666",
+  "panNumber": "AAAAA1111A",
+  "loanType": "Salaried",
+  "salary": "100",
+  "loanAmount": "10",
+  "hasPF": "Yes",
+  "designation": "Free",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:55:57.439Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-14T16:55:57.439Z] Sheety Body: {
+  "salaried": {
+    "mobile": "9999999999",
+    "pinCode": "666666",
+    "panNumber": "AAAAA1111A",
+    "salary": "100",
+    "loanAmount": "10",
+    "hasPF": "Yes",
+    "designation": "Free"
+  }
+}
+[2026-02-14T16:55:57.481Z] POST /api/submit-loan
+[2026-02-14T16:55:57.481Z] Body: {
+  "mobile": "9999999999",
+  "pinCode": "666666",
+  "panNumber": "AAAAA1111A",
+  "loanType": "Salaried",
+  "salary": "100",
+  "loanAmount": "10",
+  "hasPF": "Yes",
+  "designation": "Free",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:55:57.481Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-14T16:55:57.481Z] Sheety Body: {
+  "salaried": {
+    "mobile": "9999999999",
+    "pinCode": "666666",
+    "panNumber": "AAAAA1111A",
+    "salary": "100",
+    "loanAmount": "10",
+    "hasPF": "Yes",
+    "designation": "Free"
+  }
+}
+[2026-02-14T16:56:02.664Z] Sheety success response: {
+  "salaried": {
+    "mobile": "9999999999",
+    "pinCode": "666666",
+    "panNumber": "AAAAA1111A",
+    "salary": "100",
+    "loanAmount": "10",
+    "designation": "Free",
+    "id": 2
+  }
+}
+[2026-02-14T16:56:10.327Z] Sheety success response: {
+  "salaried": {
+    "mobile": "9999999999",
+    "pinCode": "666666",
+    "panNumber": "AAAAA1111A",
+    "salary": "100",
+    "loanAmount": "10",
+    "designation": "Free",
+    "id": 3
+  }
+}
+[2026-02-14T16:56:46.166Z] POST /api/submit-loan
+[2026-02-14T16:56:46.167Z] Body: {
+  "mobile": "8888888888",
+  "pinCode": "654321",
+  "panNumber": "BBBBB2222B",
+  "loanType": "Salaried",
+  "salary": "200",
+  "loanAmount": "2",
+  "hasPF": "No",
+  "designation": "Free",
+  "hasGST": "",
+  "businessRegistration": "",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:56:46.167Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-14T16:56:46.167Z] Sheety Body: {
+  "salaried": {
+    "mobile": "8888888888",
+    "pinCode": "654321",
+    "panNumber": "BBBBB2222B",
+    "salary": "200",
+    "loanAmount": "2",
+    "hasPF": "No",
+    "designation": "Free"
+  }
+}
+[2026-02-14T16:56:46.169Z] POST /api/submit-loan
+[2026-02-14T16:56:46.169Z] Body: {
+  "mobile": "8888888888",
+  "pinCode": "654321",
+  "panNumber": "BBBBB2222B",
+  "loanType": "Salaried",
+  "salary": "200",
+  "loanAmount": "2",
+  "hasPF": "No",
+  "designation": "Free",
+  "hasGST": "",
+  "businessRegistration": "",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:56:46.169Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-14T16:56:46.169Z] Sheety Body: {
+  "salaried": {
+    "mobile": "8888888888",
+    "pinCode": "654321",
+    "panNumber": "BBBBB2222B",
+    "salary": "200",
+    "loanAmount": "2",
+    "hasPF": "No",
+    "designation": "Free"
+  }
+}
+[2026-02-14T16:56:51.021Z] Sheety success response: {
+  "salaried": {
+    "mobile": "8888888888",
+    "pinCode": "654321",
+    "panNumber": "BBBBB2222B",
+    "salary": "200",
+    "loanAmount": "2",
+    "designation": "Free",
+    "id": 4
+  }
+}
+[2026-02-14T16:57:07.706Z] CRITICAL: Sheety Submission Failed!
+[2026-02-14T16:57:07.706Z] ""
+[2026-02-14T16:57:39.876Z] POST /api/submit-loan
+[2026-02-14T16:57:39.876Z] Body: {
+  "mobile": "7777777777",
+  "pinCode": "678901",
+  "panNumber": "CCCCC1234C",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "20",
+  "hasPF": "",
+  "designation": "",
+  "hasGST": "Yes",
+  "businessRegistration": "Yes",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:57:39.876Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-14T16:57:39.876Z] Sheety Body: {
+  "business": {
+    "mobile": "7777777777",
+    "pinCode": "678901",
+    "panNumber": "CCCCC1234C",
+    "loanAmount": "20",
+    "hasGST": "Yes",
+    "businessRegistration": "Yes"
+  }
+}
+[2026-02-14T16:57:39.878Z] POST /api/submit-loan
+[2026-02-14T16:57:39.878Z] Body: {
+  "mobile": "7777777777",
+  "pinCode": "678901",
+  "panNumber": "CCCCC1234C",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "20",
+  "hasPF": "",
+  "designation": "",
+  "hasGST": "Yes",
+  "businessRegistration": "Yes",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:57:39.878Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-14T16:57:39.878Z] Sheety Body: {
+  "business": {
+    "mobile": "7777777777",
+    "pinCode": "678901",
+    "panNumber": "CCCCC1234C",
+    "loanAmount": "20",
+    "hasGST": "Yes",
+    "businessRegistration": "Yes"
+  }
+}
+[2026-02-14T16:57:43.776Z] Sheety success response: {
+  "business": {
+    "mobile": "7777777777",
+    "pinCode": "678901",
+    "panNumber": "CCCCC1234C",
+    "loanAmount": "20",
+    "businessRegistration": "Yes",
+    "id": 2
+  }
+}
+[2026-02-14T16:57:45.533Z] Sheety success response: {
+  "business": {
+    "mobile": "7777777777",
+    "pinCode": "678901",
+    "panNumber": "CCCCC1234C",
+    "loanAmount": "20",
+    "businessRegistration": "Yes",
+    "id": 3
+  }
+}
+[2026-02-14T16:58:32.604Z] POST /api/submit-loan
+[2026-02-14T16:58:32.604Z] Body: {
+  "mobile": "6767676767",
+  "pinCode": "675849",
+  "panNumber": "DDDDD3344D",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "1000",
+  "hasPF": "",
+  "designation": "",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:58:32.604Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-14T16:58:32.604Z] Sheety Body: {
+  "business": {
+    "mobile": "6767676767",
+    "pinCode": "675849",
+    "panNumber": "DDDDD3344D",
+    "loanAmount": "1000",
+    "hasGST": "No",
+    "businessRegistration": "No"
+  }
+}
+[2026-02-14T16:58:32.606Z] POST /api/submit-loan
+[2026-02-14T16:58:32.606Z] Body: {
+  "mobile": "6767676767",
+  "pinCode": "675849",
+  "panNumber": "DDDDD3344D",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "1000",
+  "hasPF": "",
+  "designation": "",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 4,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-14T16:58:32.606Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-14T16:58:32.606Z] Sheety Body: {
+  "business": {
+    "mobile": "6767676767",
+    "pinCode": "675849",
+    "panNumber": "DDDDD3344D",
+    "loanAmount": "1000",
+    "hasGST": "No",
+    "businessRegistration": "No"
+  }
+}
+[2026-02-14T16:58:37.437Z] Sheety success response: {
+  "business": {
+    "mobile": "6767676767",
+    "pinCode": "675849",
+    "panNumber": "DDDDD3344D",
+    "loanAmount": "1000",
+    "businessRegistration": "No",
+    "id": 4
+  }
+}
+[2026-02-14T16:58:48.864Z] Sheety success response: {
+  "business": {
+    "mobile": "6767676767",
+    "pinCode": "675849",
+    "panNumber": "DDDDD3344D",
+    "loanAmount": "1000",
+    "businessRegistration": "No",
+    "id": 5
+  }
+}
+[2026-02-15T05:25:54.932Z] GET /api/generate-captcha
+[2026-02-15T05:25:54.937Z] GET /api/generate-captcha
+[2026-02-15T05:25:56.210Z] GET /api/generate-captcha
+[2026-02-15T05:25:56.212Z] GET /api/generate-captcha
+[2026-02-15T05:25:56.705Z] GET /api/generate-captcha
+[2026-02-15T05:25:56.707Z] GET /api/generate-captcha
+[2026-02-15T05:25:58.957Z] GET /api/generate-captcha
+[2026-02-15T05:25:58.959Z] GET /api/generate-captcha
+[2026-02-15T05:26:26.485Z] GET /api/generate-captcha
+[2026-02-15T05:26:26.486Z] GET /api/generate-captcha
+[2026-02-15T05:26:45.879Z] GET /api/generate-captcha
+[2026-02-15T05:26:45.881Z] GET /api/generate-captcha
+[2026-02-15T05:28:16.696Z] POST /api/verify-captcha
+[2026-02-15T05:28:16.697Z] Body: {
+  "id": "21547ce3b7490986",
+  "userInput": "BQTFYB"
+}
+[2026-02-15T05:29:01.331Z] GET /api/generate-captcha
+[2026-02-15T05:29:01.333Z] GET /api/generate-captcha
+[2026-02-15T05:29:44.066Z] GET /api/generate-captcha
+[2026-02-15T05:29:44.069Z] GET /api/generate-captcha
+[2026-02-15T05:29:58.857Z] GET /api/generate-captcha
+[2026-02-15T05:29:58.860Z] GET /api/generate-captcha
+[2026-02-15T05:29:59.311Z] GET /api/generate-captcha
+[2026-02-15T05:29:59.314Z] GET /api/generate-captcha
+[2026-02-15T05:30:11.723Z] GET /api/generate-captcha
+[2026-02-15T05:30:11.725Z] GET /api/generate-captcha
+[2026-02-15T05:30:12.111Z] GET /api/generate-captcha
+[2026-02-15T05:30:12.113Z] GET /api/generate-captcha
+[2026-02-15T05:30:14.164Z] GET /api/generate-captcha
+[2026-02-15T05:30:14.167Z] GET /api/generate-captcha
+[2026-02-15T05:30:14.561Z] GET /api/generate-captcha
+[2026-02-15T05:30:14.563Z] GET /api/generate-captcha
+[2026-02-15T05:30:14.994Z] GET /api/generate-captcha
+[2026-02-15T05:30:14.997Z] GET /api/generate-captcha
+[2026-02-15T05:30:15.459Z] GET /api/generate-captcha
+[2026-02-15T05:30:15.461Z] GET /api/generate-captcha
+[2026-02-15T05:30:15.873Z] GET /api/generate-captcha
+[2026-02-15T05:30:15.876Z] GET /api/generate-captcha
+[2026-02-15T05:30:16.226Z] GET /api/generate-captcha
+[2026-02-15T05:30:16.230Z] GET /api/generate-captcha
+[2026-02-15T05:30:16.591Z] GET /api/generate-captcha
+[2026-02-15T05:30:16.594Z] GET /api/generate-captcha
+[2026-02-15T05:33:39.257Z] POST /api/verify-captcha
+[2026-02-15T05:33:39.257Z] Body: {
+  "id": "3727cdaef64e442a",
+  "userInput": "P8NRQT"
+}
+[2026-02-15T05:33:59.754Z] POST /api/verify-pan
+[2026-02-15T05:33:59.755Z] Body: {
+  "panNumber": "ABCDE1234D"
+}
+[2026-02-15T05:34:12.123Z] POST /api/verify-pan
+[2026-02-15T05:34:12.124Z] Body: {
+  "panNumber": "ABCDE1234D"
+}
+[2026-02-15T05:34:27.558Z] POST /api/submit-loan
+[2026-02-15T05:34:27.558Z] Body: {
+  "mobile": "1234567890",
+  "pinCode": "666777",
+  "panNumber": "ABCDE1234D",
+  "loanType": "Salaried",
+  "salary": "100",
+  "loanAmount": "10",
+  "hasPF": "No",
+  "designation": "Freelancer",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true,
+  "panName": "TEST USER"
+}
+[2026-02-15T05:34:27.559Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-15T05:34:27.560Z] Sheety Body: {
+  "salaried": {
+    "mobile": "1234567890",
+    "pinCode": "666777",
+    "panNumber": "ABCDE1234D",
+    "salary": "100",
+    "loanAmount": "10",
+    "hasPF": "No",
+    "designation": "Freelancer"
+  }
+}
+[2026-02-15T05:34:32.276Z] Sheety success response: {
+  "salaried": {
+    "mobile": "1234567890",
+    "pinCode": "666777",
+    "panNumber": "ABCDE1234D",
+    "salary": "100",
+    "loanAmount": "10",
+    "designation": "Freelancer",
+    "id": 5
+  }
+}
+[2026-02-15T05:35:50.731Z] GET /api/generate-captcha
+[2026-02-15T05:35:50.733Z] GET /api/generate-captcha
+[2026-02-15T05:36:00.972Z] POST /api/verify-captcha
+[2026-02-15T05:36:00.972Z] Body: {
+  "id": "4b7b208d4532684f",
+  "userInput": "2RP35L"
+}
+[2026-02-15T05:37:19.703Z] POST /api/verify-pan
+[2026-02-15T05:37:19.703Z] Body: {
+  "panNumber": "ABCBD1234N"
+}
+[2026-02-15T05:39:13.115Z] GET /api/generate-captcha
+[2026-02-15T05:39:13.119Z] GET /api/generate-captcha
+[2026-02-15T05:39:23.585Z] POST /api/verify-captcha
+[2026-02-15T05:39:23.585Z] Body: {
+  "id": "89a9e36009debfcc",
+  "userInput": "5PFNFK"
+}
+[2026-02-15T05:39:36.440Z] POST /api/verify-pan
+[2026-02-15T05:39:36.440Z] Body: {
+  "panNumber": "ABCKD1839K"
+}
+[2026-02-15T05:39:46.106Z] POST /api/submit-loan
+[2026-02-15T05:39:46.107Z] Body: {
+  "mobile": "8986968696",
+  "pinCode": "606960",
+  "panNumber": "ABCKD1839K",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "1000000",
+  "hasPF": "No",
+  "designation": "",
+  "hasGST": "Yes",
+  "businessRegistration": "Yes",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true,
+  "panName": "ELAYA"
+}
+[2026-02-15T05:39:46.107Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-15T05:39:46.107Z] Sheety Body: {
+  "business": {
+    "mobile": "8986968696",
+    "pinCode": "606960",
+    "panNumber": "ABCKD1839K",
+    "loanAmount": "1000000",
+    "hasGST": "Yes",
+    "businessRegistration": "Yes"
+  }
+}
+[2026-02-15T05:39:51.231Z] Sheety success response: {
+  "business": {
+    "mobile": "8986968696",
+    "pinCode": "606960",
+    "panNumber": "ABCKD1839K",
+    "loanAmount": "1000000",
+    "businessRegistration": "Yes",
+    "id": 6
+  }
+}
+[2026-02-15T05:40:10.057Z] GET /api/generate-captcha
+[2026-02-15T05:40:10.059Z] GET /api/generate-captcha
+[2026-02-15T05:40:38.977Z] POST /api/verify-captcha
+[2026-02-15T05:40:38.977Z] Body: {
+  "id": "7043db97e40dca62",
+  "userInput": "EVBT13"
+}
+[2026-02-15T05:40:50.682Z] POST /api/verify-pan
+[2026-02-15T05:40:50.682Z] Body: {
+  "panNumber": "AAAAA1111A"
+}
+[2026-02-15T05:43:10.413Z] GET /api/generate-captcha
+[2026-02-15T05:43:10.415Z] GET /api/generate-captcha
+[2026-02-15T05:43:19.655Z] POST /api/verify-captcha
+[2026-02-15T05:43:19.655Z] Body: {
+  "id": "0897dd7f46b9496a",
+  "userInput": "MYXNPJ"
+}
+[2026-02-15T05:43:41.119Z] POST /api/verify-pan
+[2026-02-15T05:43:41.119Z] Body: {
+  "panNumber": "ZZZZZ1111Z"
+}
+[2026-02-15T05:44:03.684Z] POST /api/submit-loan
+[2026-02-15T05:44:03.684Z] Body: {
+  "mobile": "8938393839",
+  "pinCode": "657594",
+  "panNumber": "ZZZZZ1111Z",
+  "loanType": "Salaried",
+  "salary": "200",
+  "loanAmount": "10",
+  "hasPF": "Yes",
+  "designation": "Pichakaran",
+  "hasGST": "No",
+  "businessRegistration": "No",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true,
+  "panName": "TESTASD"
+}
+[2026-02-15T05:44:03.684Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-15T05:44:03.684Z] Sheety Body: {
+  "salaried": {
+    "mobile": "8938393839",
+    "pinCode": "657594",
+    "panNumber": "ZZZZZ1111Z",
+    "salary": "200",
+    "loanAmount": "10",
+    "hasPF": "Yes",
+    "designation": "Pichakaran"
+  }
+}
+[2026-02-15T05:44:06.244Z] Sheety success response: {
+  "salaried": {
+    "mobile": "8938393839",
+    "pinCode": "657594",
+    "panNumber": "ZZZZZ1111Z",
+    "salary": "200",
+    "loanAmount": "10",
+    "designation": "Pichakaran",
+    "id": 6
+  }
+}
+[2026-02-15T05:51:39.869Z] GET /api/generate-captcha
+[2026-02-15T05:51:39.876Z] GET /api/generate-captcha
+[2026-02-15T05:52:08.473Z] GET /api/generate-captcha
+[2026-02-15T05:52:08.475Z] GET /api/generate-captcha
+[2026-02-15T05:52:19.957Z] POST /api/verify-captcha
+[2026-02-15T05:52:19.957Z] Body: {
+  "id": "7c8d00a460c2f532",
+  "userInput": "IYUJL1"
+}
+[2026-02-15T05:52:36.988Z] POST /api/verify-pan
+[2026-02-15T05:52:36.989Z] Body: {
+  "panNumber": "AAAAA1111B"
+}
+[2026-02-15T05:53:05.718Z] POST /api/submit-loan
+[2026-02-15T05:53:05.718Z] Body: {
+  "mobile": "1292829282",
+  "pinCode": "676767",
+  "panNumber": "AAAAA1111B",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "10",
+  "hasPF": "No",
+  "designation": "",
+  "hasGST": "Yes",
+  "businessRegistration": "No",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-15T05:53:05.718Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-15T05:53:05.718Z] Sheety Body: {
+  "business": {
+    "mobile": "1292829282",
+    "pinCode": "676767",
+    "panNumber": "AAAAA1111B",
+    "loanAmount": "10",
+    "hasGst": "Yes",
+    "businessRegistration": "No"
+  }
+}
+[2026-02-15T05:53:09.147Z] Sheety success response: {
+  "business": {
+    "mobile": "1292829282",
+    "pinCode": "676767",
+    "panNumber": "AAAAA1111B",
+    "loanAmount": "10",
+    "hasGst": "Yes",
+    "businessRegistration": "No",
+    "id": 7
+  }
+}
+[2026-02-15T05:53:20.016Z] GET /api/generate-captcha
+[2026-02-15T05:53:20.017Z] GET /api/generate-captcha
+[2026-02-15T05:53:31.391Z] POST /api/verify-captcha
+[2026-02-15T05:53:31.391Z] Body: {
+  "id": "eef6e1e7d20d338e",
+  "userInput": "QK7CI2"
+}
+[2026-02-15T05:53:45.940Z] POST /api/verify-pan
+[2026-02-15T05:53:45.940Z] Body: {
+  "panNumber": "AAAAA1111A"
+}
+[2026-02-15T05:54:04.115Z] POST /api/submit-loan
+[2026-02-15T05:54:04.115Z] Body: {
+  "mobile": "0909090909",
+  "pinCode": "678909",
+  "panNumber": "AAAAA1111A",
+  "loanType": "Salaried",
+  "salary": "100",
+  "loanAmount": "0",
+  "hasPF": "No",
+  "designation": "Pichakaran",
+  "hasGST": "",
+  "businessRegistration": "",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-15T05:54:04.116Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-15T05:54:04.116Z] Sheety Body: {
+  "salaried": {
+    "mobile": "0909090909",
+    "pinCode": "678909",
+    "panNumber": "AAAAA1111A",
+    "salary": "100",
+    "loanAmount": "0",
+    "hasPf": "No",
+    "designation": "Pichakaran"
+  }
+}
+[2026-02-15T05:54:07.018Z] Sheety success response: {
+  "salaried": {
+    "mobile": "0909090909",
+    "pinCode": "678909",
+    "panNumber": "AAAAA1111A",
+    "salary": "100",
+    "loanAmount": "0",
+    "hasPf": "No",
+    "designation": "Pichakaran",
+    "id": 7
+  }
+}
+[2026-02-15T05:55:00.601Z] GET /api/generate-captcha
+[2026-02-15T05:55:00.603Z] GET /api/generate-captcha
+[2026-02-15T05:55:11.443Z] POST /api/verify-captcha
+[2026-02-15T05:55:11.443Z] Body: {
+  "id": "020617a9737f677a",
+  "userInput": "QT1C9V"
+}
+[2026-02-15T05:55:21.171Z] POST /api/verify-pan
+[2026-02-15T05:55:21.172Z] Body: {
+  "panNumber": "ABCKD1729A"
+}
+[2026-02-15T05:56:12.410Z] POST /api/submit-loan
+[2026-02-15T05:56:12.410Z] Body: {
+  "mobile": "1910191019",
+  "pinCode": "676767",
+  "panNumber": "ABCKD1729A",
+  "loanType": "Salaried",
+  "salary": "10000000",
+  "loanAmount": "100000",
+  "hasPF": "Yes",
+  "designation": "IT",
+  "hasGST": "",
+  "businessRegistration": "",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-15T05:56:12.410Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried
+[2026-02-15T05:56:12.410Z] Sheety Body: {
+  "salaried": {
+    "mobile": "1910191019",
+    "pinCode": "676767",
+    "panNumber": "ABCKD1729A",
+    "salary": "10000000",
+    "loanAmount": "100000",
+    "hasPf": "Yes",
+    "designation": "IT"
+  }
+}
+[2026-02-15T05:56:16.203Z] Sheety success response: {
+  "salaried": {
+    "mobile": "1910191019",
+    "pinCode": "676767",
+    "panNumber": "ABCKD1729A",
+    "salary": "10000000",
+    "loanAmount": "100000",
+    "hasPf": "Yes",
+    "designation": "IT",
+    "id": 2
+  }
+}
+[2026-02-15T05:56:24.587Z] GET /api/generate-captcha
+[2026-02-15T05:56:24.588Z] GET /api/generate-captcha
+[2026-02-15T05:56:35.437Z] POST /api/verify-captcha
+[2026-02-15T05:56:35.437Z] Body: {
+  "id": "153bc5dd48a8a595",
+  "userInput": "VVNLGF"
+}
+[2026-02-15T05:56:49.126Z] POST /api/verify-pan
+[2026-02-15T05:56:49.126Z] Body: {
+  "panNumber": "ADADL1893M"
+}
+[2026-02-15T05:57:02.668Z] POST /api/submit-loan
+[2026-02-15T05:57:02.668Z] Body: {
+  "mobile": "8494849484",
+  "pinCode": "676967",
+  "panNumber": "ADADL1893M",
+  "loanType": "Business",
+  "salary": "",
+  "loanAmount": "1000000000",
+  "hasPF": "",
+  "designation": "",
+  "hasGST": "No",
+  "businessRegistration": "Yes",
+  "currentStep": 3,
+  "captchaVerified": true,
+  "panVerified": true
+}
+[2026-02-15T05:57:02.668Z] Posting to Sheety: https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business
+[2026-02-15T05:57:02.668Z] Sheety Body: {
+  "business": {
+    "mobile": "8494849484",
+    "pinCode": "676967",
+    "panNumber": "ADADL1893M",
+    "loanAmount": "1000000000",
+    "hasGst": "No",
+    "businessRegistration": "Yes"
+  }
+}
+[2026-02-15T05:57:05.084Z] Sheety success response: {
+  "business": {
+    "mobile": "8494849484",
+    "pinCode": "676967",
+    "panNumber": "ADADL1893M",
+    "loanAmount": "1000000000",
+    "hasGst": "No",
+    "businessRegistration": "Yes",
+    "id": 2
+  }
+}
+[2026-02-15T05:57:16.208Z] GET /api/generate-captcha
+[2026-02-15T05:57:16.209Z] GET /api/generate-captcha
+[2026-02-15T05:59:22.567Z] GET /api/generate-captcha
+[2026-02-15T05:59:22.569Z] GET /api/generate-captcha
+[2026-02-15T06:04:49.133Z] GET /api/generate-captcha
+[2026-02-15T06:04:49.135Z] GET /api/generate-captcha
+[2026-02-15T06:04:49.685Z] GET /api/generate-captcha
+[2026-02-15T06:04:49.687Z] GET /api/generate-captcha
+[2026-02-15T06:04:50.092Z] GET /api/generate-captcha
+[2026-02-15T06:04:50.094Z] GET /api/generate-captcha
+[2026-02-15T06:04:50.538Z] GET /api/generate-captcha
+[2026-02-15T06:04:50.540Z] GET /api/generate-captcha
+[2026-02-15T06:04:51.017Z] GET /api/generate-captcha
+[2026-02-15T06:04:51.018Z] GET /api/generate-captcha
+[2026-02-15T06:04:51.485Z] GET /api/generate-captcha
+[2026-02-15T06:04:51.487Z] GET /api/generate-captcha
+[2026-02-15T06:04:51.932Z] GET /api/generate-captcha
+[2026-02-15T06:04:51.933Z] GET /api/generate-captcha
+[2026-02-15T06:04:52.384Z] GET /api/generate-captcha
+[2026-02-15T06:04:52.386Z] GET /api/generate-captcha
+[2026-02-15T06:04:52.857Z] GET /api/generate-captcha
+[2026-02-15T06:04:52.858Z] GET /api/generate-captcha
+[2026-02-15T06:04:53.343Z] GET /api/generate-captcha
+[2026-02-15T06:04:53.345Z] GET /api/generate-captcha
+[2026-02-15T06:15:55.664Z] GET /api/generate-captcha
+[2026-02-15T06:17:03.759Z] GET /
+[2026-02-15T06:17:03.783Z] GET /favicon.ico
+[2026-02-15T06:17:25.215Z] GET /api/generate-captcha
+[2026-02-15T06:17:30.603Z] GET /api/generate-captcha
+[2026-02-15T06:17:32.583Z] GET /api/generate-captcha
+[2026-02-15T06:17:33.185Z] GET /api/generate-captcha
+[2026-02-15T06:21:28.392Z] GET /
