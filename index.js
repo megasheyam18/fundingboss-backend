@@ -120,7 +120,7 @@ app.post('/api/submit-loan', async (req, res) => {
     let sheetyBody = {};
 
     if (loanType === 'Salaried') {
-      sheetyUrl = 'https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/salaried';
+      sheetyUrl = 'https://api.sheety.co/8158302f4f8bfc807bc480429465b087/fundingBoss/salaried';
       sheetyBody = {
         salaried: {
           mobile: formData.mobile,
@@ -133,7 +133,7 @@ app.post('/api/submit-loan', async (req, res) => {
         }
       };
     } else if (loanType === 'Business') {
-      sheetyUrl = 'https://api.sheety.co/db04369c091c77f3a070a8771d34d148/sample1/business';
+      sheetyUrl = 'https://api.sheety.co/8158302f4f8bfc807bc480429465b087/fundingBoss/business';
       sheetyBody = {
         business: {
           mobile: formData.mobile,
