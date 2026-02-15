@@ -115,6 +115,7 @@ app.post('/api/submit-loan', async (req, res) => {
     const { loanType } = formData;
 
     submissions.push({ ...formData, timestamp: new Date() });
+    
 
     let sheetyUrl = '';
     let sheetyBody = {};
