@@ -30,8 +30,31 @@ app.use((req, res, next) => {
 });
 
 // In-memory storage (demo only)
-const captchas = {};
 const submissions = [];
+const SECRET = process.env.CAPTCHA_SECRET || 'fundboss-default-secret';
+
+function signCaptcha(challenge, expiry) {
+  const data = `${challenge}:${expiry}`;
+  const signature = crypto.createHmac('sha256', SECRET).update(data).digest('hex');
+  return `${Buffer.from(data).toString('base64')}.${signature}`;
+}
+
+function verifyCaptchaSignature(token) {
+  try {
+    const [dataBase64, signature] = token.split('.');
+    if (!dataBase64 || !signature) return null;
+
+    const data = Buffer.from(dataBase64, 'base64').toString();
+    const expectedSignature = crypto.createHmac('sha256', SECRET).update(data).digest('hex');
+
+    if (signature !== expectedSignature) return null;
+
+    const [challenge, expiry] = data.split(':');
+    return { challenge, expiry: parseInt(expiry) };
+  } catch (e) {
+    return null;
+  }
+}
 
 // Root route
 app.get('/', (req, res) => {
@@ -40,28 +63,26 @@ app.get('/', (req, res) => {
 
 // CAPTCHA Generation
 app.get('/api/generate-captcha', (req, res) => {
-  const id = crypto.randomBytes(8).toString('hex');
   const challenge = Math.random().toString(36).substring(2, 8).toUpperCase();
   const expiry = Date.now() + 5 * 60 * 1000;
+  const id = signCaptcha(challenge, expiry);
 
-  captchas[id] = { challenge, expiry };
   res.json({ success: true, id, challenge });
 });
 
 // CAPTCHA Verification
 app.post('/api/verify-captcha', (req, res) => {
   const { id, userInput } = req.body;
-  const stored = captchas[id];
+  const stored = verifyCaptchaSignature(id);
 
   if (!stored || Date.now() > stored.expiry) {
-    return res.status(400).json({ success: false, message: 'Expired or invalid' });
+    return res.status(400).json({ success: false, message: 'Expired or invalid CAPTCHA' });
   }
 
   if (stored.challenge === userInput.toUpperCase()) {
-    delete captchas[id];
     res.json({ success: true });
   } else {
-    res.status(400).json({ success: false });
+    res.status(400).json({ success: false, message: 'Incorrect CAPTCHA' });
   }
 });
 
