@@ -6,13 +6,9 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
-const logPath = path.join(__dirname, 'debug.log');
-const logStream = fs.createWriteStream(logPath, { flags: 'a' });
-
 function logger(msg) {
-  const line = `[${new Date().toISOString()}] ${msg}\n`;
-  console.log(msg);
-  logStream.write(line);
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] ${msg}`);
 }
 
 const app = express();
@@ -177,11 +173,13 @@ app.post('/api/submit-loan', async (req, res) => {
   }
 });
 
-// ✅ ADDED FOR LOCAL DEVELOPMENT
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`FundBoss API running locally on http://localhost:${PORT}`);
-});
+// ✅ ONLY FOR LOCAL DEVELOPMENT
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 5000;
+  app.listen(PORT, () => {
+    console.log(`FundBoss API running locally on http://localhost:${PORT}`);
+  });
+}
 
 // ✅ REQUIRED FOR VERCEL
 module.exports = app;
