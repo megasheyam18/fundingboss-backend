@@ -94,14 +94,19 @@ app.post('/api/submit-loan', async (req, res) => {
     res.json({
       success: true,
       message: 'Loan submitted & saved to Google Sheet',
-      sheetData: response.data
-    });
+    }); 
   } catch (error) {
+    console.error('Sheety API Error:', error.response?.data || error.message);
     res.status(500).json({
       success: false,
-      error: error.message
+      error: error.response?.data?.error || error.message || 'Failed to submit not Sheety'
     });
   }
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
 // ✅ REQUIRED FOR VERCEL (NO app.listen)
